@@ -1,5 +1,6 @@
 let color = "black";
 let click = false;
+document.querySelector(".error").style.display = "none";
 
 function populateBoard(size) {
   let board = document.querySelector(".board");
@@ -18,9 +19,10 @@ function populateBoard(size) {
 
 function changeSize(input) {
   if (input >= 2 && input <= 100) {
+    document.querySelector(".error").style.display = "none";
     populateBoard(input);
   } else {
-    console.log("too many squares to render");
+    document.querySelector(".error").style.display = "flex";
   }
 }
 
