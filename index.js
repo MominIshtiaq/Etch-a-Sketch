@@ -1,5 +1,5 @@
 let color = "black";
-let click = true;
+let click = false;
 
 function populateBoard(size) {
   let board = document.querySelector(".board");
@@ -45,6 +45,13 @@ function resetBoard() {
 }
 
 populateBoard(16);
-document.querySelector("body").addEventListener("click", () => {
-  click = !click;
+document.querySelector("body").addEventListener("click", (e) => {
+  if (e.target.tagName != "BUTTON") {
+    click = !click;
+    if (click) {
+      document.querySelector(".mode").textContent = "Mode: Coloring";
+    } else {
+      document.querySelector(".mode").textContent = "Mode: Not Coloring";
+    }
+  }
 });
