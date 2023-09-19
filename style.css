@@ -13,9 +13,76 @@
   flex-direction: column;
 }
 
+.title {
+  font-size: 1.67rem;
+  color: transparent;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+  letter-spacing: 0.67rem;
+  margin-bottom: 0.4rem;
+}
+
+.mode {
+  font-size: 0.67rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
 .board {
   width: 500px;
   height: 400px;
   display: grid;
   border: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.buttons button {
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.buttons button:nth-of-type(1):hover {
+  background: black;
+  color: white;
+}
+
+.buttons button:nth-of-type(2):hover {
+  background: gray;
+  color: white;
+}
+
+.buttons button:nth-of-type(3):hover {
+  background: black;
+  color: grey;
+}
+
+.buttons button:nth-of-type(4):hover {
+  background: linear-gradient(40deg, red, green);
+  color: white;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.input input {
+  padding: 0.5rem 1rem;
+}
+
+.input button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
